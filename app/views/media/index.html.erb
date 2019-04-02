@@ -76,7 +76,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/zl-fetch@2.1.8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.9.1/rellax.min.js"></script>
-<script src="<%= asset_path('rellax.min.js')%>"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script>
@@ -143,7 +142,7 @@
 <script>
     // Gets book volume covers from the Google Books app.
     var booksDiv = document.querySelector('#booksPage')
-    zlFetch('https://www.googleapis.com/books/v1/volumes?q=samurai&printType=books&maxResults=15&key=AIzaSyAwLGxNQqntI0-yaJ5DeFbudX_DrugiUK8')
+    // zlFetch('https://www.googleapis.com/books/v1/volumes?q=samurai&printType=books&maxResults=15&key=AIzaSyAwLGxNQqntI0-yaJ5DeFbudX_DrugiUK8')
     .then(res => listBooks(booksDiv, res.body.items))
 
     function listBooks (listDiv, books) {
