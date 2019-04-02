@@ -22,4 +22,3 @@
 $(document).ready(function(){
     console.log("jQuery READY")
 })
-

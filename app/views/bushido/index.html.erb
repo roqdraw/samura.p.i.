@@ -326,13 +326,20 @@
             <p class="body-heading">Students</p>
             <p class="body-para">This app is intended to be a launchpad into the philosophy of samurai, and we believe further education and inspiration is paramount to practice the tenets.
             </p>
-            <p>Here are some of the diligent students who are self-educating themselves to follow the ways of bushido.</p>
 
             <% unless logged_in? %>
-            <p>If you would like to be part of this group its easy to sign up.</p>
-            <h3><a href="/users/new">Join Here.</a></h3>
+            <p class="body-para">If you would like to be part of this group its easy to sign up.</p>
+            <h3><a href="/users/new" class="jump">Join Here.</a></h3>
             <% end %>
         </div>
     </main>
 
 <%# </div> %>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+    console.log('AOS is running.')
+
+    var scroll = new SmoothScroll('[data-easing="easeInOutQuart"]', {easing: 'easeInOutQuart'});
+</script>

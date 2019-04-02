@@ -20,16 +20,21 @@
                 <div class="signup-label-author">
                     <p class="body-heading-scroll">By:</p>
 
-                    <% if current_user.id == @user.id and current_user.id == @post.user_id%>
-                        <a href="/user"><p class="student-username"><%= @user.username %></p></a>
-                    <% elsif @user.id == @post.user_id %>
-                        <a href="/users/<%= @user.id%>"><p class="student-username"><%= @user.username %></p></a>
+                    <% if !current_user%>
+                        <% if @user.id == @post.user_id %>
+                            <a href="/users/<%= @user.id%>"><p class="student-username"><%= @user.username %></p></a>
+                        <% end %>
+                    <% else %>
+                        <% if current_user.id == @user.id and current_user.id == @post.user_id%>
+                            <a href="/user"><p class="student-username"><%= @user.username %></p></a>
+                        <% elsif @user.id == @post.user_id %>
+                            <a href="/users/<%= @user.id%>"><p class="student-username"><%= @user.username %></p></a>
+                        <% end %>
                     <% end %>
-
                 </div>
 
             </div>
         </div>
-        <a href="/posts/#scroll-index" class=jump-back> Back to Scrolls </a>
+        <a href="/posts/#scroll-index" class=jump-back> All Scrolls </a>
     </div>
 </div>

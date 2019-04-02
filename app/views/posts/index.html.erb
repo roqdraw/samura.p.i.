@@ -31,13 +31,23 @@
                         <div class="scroll-details">
                             <a href="/posts/<%= post.id %>"><p class="scroll-title"> <%= post.title %> </p></a>
                             <%# <p class="scroll-subtitle"> <%= post.subtitle %>
-                                <% @users.select do |user| %>
-                                    <% if current_user.id == user.id and current_user.id == post.user_id%>
-                                        <a href="/user"><p class="scroll-user">By <%= user.username %></p></a>
-                                    <% elsif user.id == post.user_id %>
-                                        <a href="/users/<%= user.id%>"><p class="scroll-user">By <%= user.username %></p></a>
-                                    <% end %>
-                                <% end %> 
+                                <%# <% @users.select do |user| %>
+                                    <% if !current_user %>
+                                        <% @users.select do |user| %>
+                                            <% if user.id == post.user_id%>
+                                                <a href="/users/<%= user.id%>"><p class="scroll-user">By <%= user.username %></p></a>
+                                            <% end %> 
+                                         <% end %> 
+                                    <% else %>
+                                        <% @users.select do |user| %>
+                                            <% if current_user.id == user.id and current_user.id == post.user_id%>
+                                                <a href="/user"><p class="scroll-user">By <%= user.username %></p></a>
+                                            <% elsif user.id == post.user_id %>
+                                                <a href="/users/<%= user.id%>"><p class="scroll-user">By <%= user.username %></p></a>
+                                            <% end %>
+                                        <% end %>
+                                    <% end %> 
+                                <%# <% end %>
                         </div>
                     </div>
                     <div class="banner1"></div>
