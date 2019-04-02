@@ -338,7 +338,7 @@ a {
     height: 100vh;
     text-align: center;
     color: rgb(0, 0, 0);
-    background-image: url('/assets/scroll-paper-template-printable-design-pattern.jpg');
+    background-image: asset-url("scroll-paper-template-printable-design-pattern.jpg");
     background-size: 100vw 100vh;
     padding: 10rem;
 }
