@@ -497,7 +497,7 @@ a {
 }
 
 #credits {
-    background-image: url('/assets/mt_fuji.jpg');
+    background-image: asset-url("mt_fuji.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position-x: center;
