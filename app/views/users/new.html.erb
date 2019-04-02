@@ -1,0 +1,57 @@
+<main class="login-page">
+
+
+    <div class="sign-up-section">
+        
+        <div class="signup-intro">
+            <p class="tenet-title">Join the Dojo</p>
+
+            <p class="body-para">It's great of you to become a student like everyone who contributes here.</p>
+            <p class="body-para">When you join the dojo its the camaraderie that makes everyone, from seasoned master to green student feel welcome.</p>
+            <p class="body-para">You're a couple of steps away to fully immerse yourself in the ways of bushido.</p>
+
+            <h3 class="body-heading2">Let's get started.</h3>
+        </div>
+
+        <div class="sign-up-scroll">
+            <form class="sign-up-form" action="/users" method="post">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                <div class="student-image-signup"></div>
+
+                <div class="signup-label">
+                    <label class="scroll-title" for=""> First Name </label>
+                    <input class="signup-input" name="first_name" type="text">
+                </div>
+
+                <div class="signup-label">
+                    <label class="scroll-title" for="">Surname</label>
+                    <input class="signup-input" name="last_name" type="text">
+                </div>
+
+                <div class="signup-label">
+                    <label class="scroll-title" for="">Username</label>
+                    <input class="signup-input" name="username" type="text">
+                </div>
+
+                <div class="signup-label">
+                    <label class="scroll-title" for="">Email</label>
+                    <input class="signup-input" name="email" type="text">
+                </div>
+
+                <div class="signup-label">
+                    <label class="scroll-title" for="">Password</label>
+                    <input class="signup-input" name="password" type="password">
+                </div>
+
+                <%# <div class="signup-label"> %>
+                    <%# <label class="scroll-title" for="">Avatar</label> %>
+                    <%# <input class="signup-input" name="image_url" type="text"> %>
+                <%# </div> %>
+
+                <button class="signup-button">SIGN UP</button>
+            </form>
+        </div>
+
+    </div>
+</main>

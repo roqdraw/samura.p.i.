@@ -1,0 +1,46 @@
+<main class="my-profile-page">
+
+    <div class="my-profile-div">
+
+        <div class="my-profile-box">
+            <div class="my-profile-container">
+                <div class="my-profile-image"></div>
+                <p class="my-profile-username"> <%= @user.username %> </p>
+                <p class="my-profile-para"><%= @user.first_name %> <%= @user.last_name %></p>
+                <% @posts.each do |post| %>
+                    <% if post.user_id == @user.id%>
+                        <% @count += 1 %>
+                    <% end %>
+                <% end %>
+                <p class="my-profile-scrolls">Scrolls: <%= @count %> </p>
+            </div>
+                <a href="posts/new"><p class="my-jump"> Write Scroll </p></a>
+        </div>
+
+        <div class="my-scrolls">
+            <%# <div class="intro-about"> %>
+            <p class="my-scrolls-heading"> My Scrolls </p>
+            <%# </div> %>
+            <div id="my-scrolling-scrolls">
+                <div class="scrolls-list">
+                    <% @posts.each do |post| %>
+                    <div class="scroll-container">
+                        <div class="main-scroll">
+                            <div class="scroll-start">
+                                <div class="scroll-details">
+                                    <a href="/posts/<%= post.id %>"> <p class="scroll-title"> <%= post.title %> </p></a>
+                                    <p class="scroll-user">By <%= @user.username %></p>
+                                </div>
+                            </div>
+                            <div class="banner1"></div>
+                            <div class="banner2"></div>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</main>

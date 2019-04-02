@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAMURA.P.I.</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+    <nav id="main-nav">
+      <div>
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/bushido">Bushido</a>
+        <a class="nav-link" href="/users">Students</a>
+        <a class="nav-link" href="/posts">Scrolls</a>
+        <a class="nav-link" href="/media">Media</a>
+        <a class="nav-link" href="/credits">Credits</a>
+      </div>
+
+      <div class="user-box">
+          <% if logged_in? %>
+            <div class="dropdown-menu">
+            <button onclick="dropDown()" class="dropbtn"><%= current_user.username %></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a class="user-list" href="/user">My Profile</a>
+              <a class="user-list" href="/posts/new">New Scroll</a>
+              <a class="user-list" href="/sign_out">Sign out</a>
+            </div>
+        </div>
+          <% else %>
+            <a href="/login">Login</a>
+            <a href="/users/new">Sign Up</a>
+          <% end %>
+      </div>
+    </nav>
+    
+      <%= yield %>
+
+  </body>
+</html>
+
+<script>
+  var dropDown = function() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+  }
+</script>

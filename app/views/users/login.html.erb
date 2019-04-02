@@ -1,0 +1,16 @@
+<% unless logged_in? %>
+    <h1>Login</h1>
+    <p>Get over here.</p>
+
+    <form action="/sign_in" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+        <label for="">Email</label>
+        <input name="email" type="text">
+
+        <label for="">Password</label>
+        <input name="password" type="password">
+
+        <button>Log In</button>
+    </form>
+<% end %>

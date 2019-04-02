@@ -1,0 +1,48 @@
+<%# <div class="users-body"> %>
+
+ <div id="parallax10" class="parallax rellax" data-rellax-speed="0">
+            <p class="brushstroke rellax" data-rellax-speed="-1.5" 
+            data-aos="fade-up"
+            data-aos-delay="10"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            >STUDENTS</p>
+    </div>
+
+    <main class="page">
+        <div class="intro-about">
+            <p class="body-heading">Students</p>
+            <p class="body-para">This app is intended to be a launchpad into the philosophy of samurai, and we believe further education and inspiration is paramount to practice the tenets.
+            </p>
+            <p class="body-para">Here are some of the diligent students who are self-educating themselves to follow the ways of bushido.</p>
+
+            <% unless logged_in? %>
+            <p class="body-para">If you would like to be part of this group its easy to sign up.</p>
+            <h3><a href="/users/new">Join Here.</a></h3>
+            <% end %>
+        </div>
+    </main>
+
+    <%# <div id="parallax11" class="parallax rellax" data-rellax-speed="0"></div> %>
+
+    <main class="students-page">
+        <p class="student-heading">Student List</p>
+
+        <div id="scrolling-students">
+            <div class="student-list">
+                <% @users.each do |user| %>
+                    <div class="student-box">
+                        <div class="student-container">
+                            <div class="student-image"></div>
+                            <a href="/users/<%= user.id %>"><p class="student-username"> <%= user.username %> </p></a>
+                            <p class="student-scrolls">Scrolls: <%= @count = Post.where(user_id: user.id).count %> </p>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </main>
+
+<%# </div> %>

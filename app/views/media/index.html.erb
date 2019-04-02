@@ -1,0 +1,168 @@
+<%# <div class="media-body"> %>
+
+    <div id="parallax1" class="parallax rellax" data-rellax-speed="0">
+            <p class="brushstroke rellax" data-rellax-speed="-1.5" 
+            data-aos="fade-up"
+            data-aos-delay="10"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            >MEDIA</p>
+    </div>
+
+    <main class="page">
+        <div class="intro-about">
+            <p class="body-heading">Media</p>
+            <p class="body-para">This app is intended to be a launchpad into the philosophy of samurai, and we believe further education and inspiration is paramount to practice the tenets.
+                We've provided a library of media relating to samurai: films, tv shows and books.
+            </p>
+        </div>
+    </main>
+    
+    <div id="moviePage" class="media-page">
+        <div class="last-pages">
+            <p class="tenet-title">Films</p>
+            <div class="media-container" 
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false"
+                    >
+                <div id="movie-list">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tvPage" class="media-page">
+        <div class="last-pages">
+            <p class="tenet-title">TV Series</p>
+            <div class="media-container" 
+                    data-aos="fade-up"
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false"
+                    >
+                <div id="tv-list">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="booksPage" class="media-page">
+        <div class="last-pages">
+            <p class="tenet-title">Books</p>
+            <div class="media-container" 
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false"
+                    >
+                <div id="book-list">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%# </div> %>
+
+<script src="https://cdn.jsdelivr.net/npm/zl-fetch@2.1.8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.9.1/rellax.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+
+    var rellax = new Rellax('.rellax');
+
+    AOS.init();
+        console.log('AOS is running.')
+</script>
+<script>
+    // Gets movie posters from the TMDB app.
+    var moviesDiv = document.querySelector('#movie-list')
+    zlFetch('https://api.themoviedb.org/3/search/movie?api_key=2e4bf3ae7a9007a8ff8ac9fbfdeb67d5&language=en-US&query=samurai&page=1&include_adult=true')
+    .then(res => listMovies(moviesDiv, res.body.results))
+    
+    function listMovies (listDiv, movies) {
+        var movieList = document.querySelector('#movie-list')
+        movies.forEach(movie => {
+            if (movie.poster_path !== null) {
+                var div = document.createElement('div')
+                div.classList.add('carousel-height')
+                var img = document.createElement('img')
+                img.classList.add('poster-height')
+                img.setAttribute("src", `https://image.tmdb.org/t/p/original/${movie.poster_path}`)
+                div.append(img)
+                movieList.append(div)
+            }
+        })
+        $('#movie-list').flickity({
+            cellAlign: 'left',
+            contain: true,
+            freeScroll: true,
+            wrapAround: true    
+        });
+    }
+</script>
+<script>
+    // Gets tv series posters from the TMDB app.
+    var tvDiv = document.querySelector('#tvPage')
+    zlFetch('https://api.themoviedb.org/3/search/tv?api_key=2e4bf3ae7a9007a8ff8ac9fbfdeb67d5&language=en-US&query=samurai&page=1')
+    .then(res => listTV(tvDiv, res.body.results))
+    
+    function listTV (listDiv, tvShows) {
+        var tvList = document.querySelector('#tv-list')
+        tvShows.forEach(tvShow => {
+            if (tvShow.poster_path !== null) {
+                var div = document.createElement('div')
+                div.classList.add('carousel-height')
+                var img = document.createElement('img')
+                img.classList.add('poster-height')
+                img.setAttribute("src", `https://image.tmdb.org/t/p/original/${tvShow.poster_path}`)
+                div.append(img)
+                tvList.append(div)
+            }
+        })
+        $('#tv-list').flickity({
+            cellAlign: 'left',
+            contain: true,
+            freeScroll: true,
+            wrapAround: true    
+        });
+    }
+</script>
+<script>
+    // Gets book volume covers from the Google Books app.
+    var booksDiv = document.querySelector('#booksPage')
+    zlFetch('https://www.googleapis.com/books/v1/volumes?q=samurai&printType=books&maxResults=15&key=AIzaSyAwLGxNQqntI0-yaJ5DeFbudX_DrugiUK8')
+    .then(res => listBooks(booksDiv, res.body.items))
+
+    function listBooks (listDiv, books) {
+        var bookList = document.querySelector('#book-list')
+        books.forEach(book => {
+            if (book.volumeInfo.imageLinks.thumbnail !== null) {
+                var div = document.createElement('div')
+                div.classList.add('carousel-height')
+                var img = document.createElement('img')
+                img.classList.add('book-height')
+                img.setAttribute("src", `${book.volumeInfo.imageLinks.thumbnail}`)
+                div.append(img)
+                bookList.append(div)
+            }
+        })
+        $('#book-list').flickity({
+            cellAlign: 'left',
+            contain: true,
+            freeScroll: true,
+            wrapAround: true    
+        });
+    }
+</script>

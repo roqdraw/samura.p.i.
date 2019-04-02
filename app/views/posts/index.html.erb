@@ -1,0 +1,50 @@
+
+<div id="parallax12" class="parallax rellax" data-rellax-speed="0">
+        <p class="brushstroke rellax" data-rellax-speed="-1.5" 
+        data-aos="fade-up"
+        data-aos-delay="10"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        >SCROLLS</p>
+</div>
+
+<main class="page">
+    <div class="intro-about">
+        <p class="body-heading"> Scrolls </p>
+        <p class="body-para">Here you'll find many posts scrolls (aka. posts) that students have written reflecting on the teachings on Bushido or its applications on daily life.
+                            It is encouraged that people take their time and fully absorb the teachings so they are can pass on the teachings to other fellow like-minded people.
+        </p>
+    </div>
+</main>
+
+<main id="scroll-index" class="students-page">
+    <p class="scroll-heading">Scroll List</p>
+
+    <div id="scrolling-scrolls">
+        <div class="scrolls-list">
+            <% @posts.each do |post| %>
+            <div class="scroll-container">
+                <div class="main-scroll">
+                    <div class="scroll-start">
+                        <div class="scroll-details">
+                            <a href="/posts/<%= post.id %>"><p class="scroll-title"> <%= post.title %> </p></a>
+                            <%# <p class="scroll-subtitle"> <%= post.subtitle %>
+                                <% @users.select do |user| %>
+                                    <% if current_user.id == user.id and current_user.id == post.user_id%>
+                                        <a href="/user"><p class="scroll-user">By <%= user.username %></p></a>
+                                    <% elsif user.id == post.user_id %>
+                                        <a href="/users/<%= user.id%>"><p class="scroll-user">By <%= user.username %></p></a>
+                                    <% end %>
+                                <% end %> 
+                        </div>
+                    </div>
+                    <div class="banner1"></div>
+                    <div class="banner2"></div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</main>

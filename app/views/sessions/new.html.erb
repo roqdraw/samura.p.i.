@@ -1,0 +1,55 @@
+<% unless logged_in? %>
+    <main class="login-page">
+        <div class="intro-about">
+            <p class="tenet-title"> Login </p>
+        </div>
+
+        <div>
+            <form action="/sign_in" method="post" class="login-form">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                <%# <label for="" class="form-body-heading">Email</label> %>
+                <%# <input class="login-input" name="email" type="text"> %>
+
+                <div class="scroll-container">
+                    <div class="login-main-scroll">
+                        <div class="scroll-start">
+                            <div class="login-scroll-details">
+                                <label class="scroll-title"> Email </label>
+                                <input class="login-input" name="email" type="text">
+                            </div>
+                        </div>
+                        <div class="banner1"></div>
+                        <div class="banner2"></div>
+                    </div>
+                </div>
+
+                <div class="scroll-container">
+                    <div class="login-main-scroll">
+                        <div class="scroll-start">
+                            <div class="login-scroll-details">
+                                <label class="scroll-title"> Password </label>
+                                <input class="login-input" name="password" type="password">
+                            </div>
+                        </div>
+                        <div class="banner1"></div>
+                        <div class="banner2"></div>
+                    </div>
+                </div>
+
+                <%# <label for="" class="form-body-heading">Password</label> %>
+                <%# <input class="login-input" name="password" type="password"> %>
+
+                <%# <button class="login-button">Log In</button> %>
+                
+                <div class="login-student-box">
+                    <div class="student-container">
+                        <div class="student-image"></div>
+                        <button class="login-button"> Log In </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+<% end %>

@@ -1,0 +1,46 @@
+<main class="login-page">
+
+
+    <div class="sign-up-section">
+        
+        <div class="signup-intro">
+            <p class="tenet-title">Write a New Scroll</p>
+
+            <p class="body-para">You are ready to share some wisdom with the world.</p>
+            <p class="body-para">Sometimes there's a feeling you can't quite encapsulate but you certainly know what it is. This is what bushido exemplifies and what it's students aims to achieve: To pass on the teachings.</p>
+           
+            <p class="body-heading2">Guide to get you started:</p>
+            <div class="list-body">
+                <li class="body-list">Have your title boiled down into 3 words max.</li>
+                <li class="body-list">State your intention for people to connect with as your subtitle.</li>
+                <li class="body-list">For content, write your lesson that you've learnt or a thought that you want to express.</li>
+            </div>
+        </div>
+
+        <div class="sign-up-scroll">
+            <form class="sign-up-form" action="/posts" method="post">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                <div class="student-image-signup"></div>
+
+                <div class="signup-label">
+                    <label class="scroll-title" for=""> Title </label>
+                    <input class="signup-input" name="title" type="text">
+                </div>
+
+                <div class="signup-label">
+                    <label class="scroll-title" for="">Subtitle</label>
+                    <input class="signup-input" name="subtitle" type="text">
+                </div>
+
+                <div class="signup-label">
+                    <label class="scroll-title" for="">Content</label>
+                    <textarea class="content-input" name="description" type="text"></textarea>
+                </div>
+
+                <button class="signup-button">WRITE</button>
+            </form>
+        </div>
+
+    </div>
+</main>

@@ -1,0 +1,2 @@
+module BushidoHelper
+end

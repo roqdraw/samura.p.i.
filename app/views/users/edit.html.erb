@@ -1,0 +1,37 @@
+<main class="login-page">
+
+    <div class="sign-up-scroll">
+    <%= form_tag "/users/#{@user.id}", method: 'put', class: "sign-up-form" do %>
+
+        <div class="student-image-signup"></div>
+
+        <div class="signup-label">
+            <label class="scroll-title" for=""> First Name </label>
+            <input class="signup-input" name="first_name" type="text" value="<%= @user.first_name%>">
+        </div>
+
+        <div class="signup-label">
+            <label class="scroll-title" for="">Surname</label>
+            <input class="signup-input" name="last_name" type="text" value="<%= @user.last_name%>">
+        </div>
+
+        <div class="signup-label">
+            <label class="scroll-title" for="">Username</label>
+            <input class="signup-input" name="username" type="text" value="<%= @user.username%>">
+        </div>
+
+        <div class="signup-label">
+            <label class="scroll-title" for="">Email</label>
+            <input class="signup-input" name="email" type="text" value="<%= @user.email%>">
+        </div>
+
+        <div class="signup-label">
+            <label class="scroll-title" for="">Password</label>
+            <input class="signup-input" name="password" type="password" value="<%= @user.password%>">
+        </div>
+
+        <button class="signup-button">UPDATE</button>
+    <% end %>
+    </div>
+
+</main>
