@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require_jquery-sakura
  *= require_tree .
  *= require_self
  */
@@ -1409,4 +1410,25 @@ a {
 
 #myDropdown a:hover {
     color: rgb(255, 162, 0);
+}
+
+.jump-lib {
+    color: rgb(255, 255, 255);
+    font-family: 'glades';
+    font-size: 30px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.jump-lib:hover {
+    color: rgb(245, 58, 58);
+    text-shadow: black 2px 2px;
+}
+
+#author-image {
+    background-image: url('https://www.illustratorsaustralia.com/site/assets/files/4185/11_enlightenmentality_web.jpg');
+    height: 660px;
+    width: 468px;
+    background-size:100% 100%;
+    z-index: 3;
 }

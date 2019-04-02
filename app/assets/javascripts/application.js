@@ -17,8 +17,14 @@
 
 //= require jquery3
 //= require jquery_ujs
+//= require jquery-sakura.min.js
 //= require_tree .
 
 $(document).ready(function(){
     console.log("jQuery READY")
 })
+
+$(document).load(function() {
+    $('body').sakura();
+    console.log('sakura is window ready')
+});
