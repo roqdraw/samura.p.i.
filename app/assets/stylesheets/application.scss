@@ -1,0 +1,1414 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+    font-family: 'glades';
+    src: asset-url("GLADES-DEMO.ttf");
+}
+
+@font-face {
+    font-family: 'brushstroke';
+    src: asset-url("Brushstrike-trial.ttf");
+}
+
+@font-face {
+    font-family: 'bamboo';
+    src: asset-url("DK-Black-Bamboo.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ body, html {
+    margin: 0;
+    /* scroll-behavior: smooth; */
+    background-color: rgb(255, 247, 204);
+    height: 100%;
+    width: 100%;
+}
+
+.home-body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    /* background-image: url('https://uploads0.wikiart.org/images/utagawa-kuniyoshi/yoko-protecting-his-father-from-a-tiger.jpg'); */
+    /* background-image: url('https://data.ukiyo-e.org/mfa/images/sc170742.jpg'); */
+    background-image: url('http://www.artwallpaper.eu/wallpaper/wp-content/uploads/2012/12/03/104/Samurai-Ukiyo-E-Art-Wallpaper-1920x1200.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-p {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-title {
+    font-size: 800%;
+    font-family: 'glades';
+    color: rgb(255, 255, 255);
+    /* text-shadow: 0px 10px black; */
+    /* margin-top: 2em; */
+    margin-bottom: 3%;
+}
+
+#jump-in-about {
+    width: 75px;
+    height: 75px;
+    background-color: blue;
+    margin: 0 auto;
+    margin-top: 5em;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info-info {
+    /* background-color: blueviolet; */
+    padding: 5rem;
+    flex-grow: 1;
+    width: 60%;
+}
+
+.home-intro {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+}
+
+.home-bg {
+    background-image: url('https://us.123rf.com/450wm/sahua/sahua1210/sahua121000002/15886347-traditional-japanese-seigaiha-waves-seamless-pattern.jpg?ver=6');
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.intro-about {
+    width: 60%;
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    /* background-image: url('https://us.123rf.com/450wm/sahua/sahua1210/sahua121000002/15886347-traditional-japanese-seigaiha-waves-seamless-pattern.jpg?ver=6'); */
+}
+
+.credit-about {
+    width: 60%;
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-image: url('https://us.123rf.com/450wm/sahua/sahua1210/sahua121000002/15886347-traditional-japanese-seigaiha-waves-seamless-pattern.jpg?ver=6');
+}
+
+.intro-bg {
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+    padding: 2em;
+}
+
+.about-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(255, 131, 131);
+    text-align: center;
+}
+
+.bushido-body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(255, 39, 39);
+    text-align: center;
+}
+
+.choose {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.choose-one, .choose-two, .choose-three, .choose-four, .choose-five, .choose-six, .choose-seven, .choose-eight {
+    background-color: black;
+    background-position-x: 60%;
+    background-size: cover;
+    background-image: url('https://i.pinimg.com/474x/1f/c9/ab/1fc9ab45ab24e88e3267496e59a23125--japanese-prints-japanese-art.jpg');
+    position: relative;
+    flex-grow: 1;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose-two {
+    background-image: url('https://i.pinimg.com/originals/b0/a7/a0/b0a7a0e58091393a1d06114970588824.jpg');
+    background-position-x: 40%;
+}
+
+.choose-three {
+    background-image: url('https://i.pinimg.com/originals/80/ca/25/80ca25cfcc288e6b29217c8c1bcf31a3.jpg');
+    background-position-x: 40%;
+}
+
+.choose-four {
+    background-image: url('https://i.pinimg.com/originals/68/32/09/6832096e2916b3bf925700d3bab94362.jpg');
+    background-position-x: 60%;
+}
+
+.choose-five {
+    background-image: url('https://i.pinimg.com/originals/53/67/35/536735cf98ce38a9abd0e75ab1cd1ab9.jpg');
+    background-position-x: 60%;
+}
+
+.choose-six {
+    background-image: url('https://i.pinimg.com/originals/10/5d/7a/105d7a4a4b62b989bb04a2b6cfd97059.jpg');
+    background-position-x: 45%;
+}
+
+.choose-seven {
+    background-image: url('https://steemitimages.com/DQmTMpnRci86sRahVN4JjULBcbzZaH8KGJVEpcQDSBaqR2M/47samurai_37.jpg');
+    background-position-x: 45%;
+}
+
+.choose-eight {
+    background-image: url('https://www.artelino.com/auctionimages/items/68210g1.jpg');
+    background-position-x: 65%;
+}
+
+.choose-one:hover .overlay,
+.choose-two:hover .overlay,
+.choose-three:hover .overlay,
+.choose-four:hover .overlay,
+.choose-five:hover .overlay,
+.choose-six:hover .overlay,
+.choose-seven:hover .overlay,
+.choose-eight:hover .overlay {
+    cursor: pointer;
+    background: rgba(0, 0, 0, .6);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: 0.5s ease;
+}
+
+.tenet-button {
+    position: absolute;
+    color: white;
+    /* left: auto;
+    top: auto; */
+    margin: auto;
+    padding: 10px 20px;
+    font-family: 'glades';
+    text-align: inherit;
+    font-size: 100%;
+    width: 100px;
+    opacity: 0;
+    z-index: 1;
+    transition: .3s ease;
+}
+
+.kanji {
+    font-size: 50px;
+    text-align: center;
+}
+
+.vertical {
+    width: 20px;
+    line-height: 2;
+    word-wrap: break-word;
+    text-align: center;
+    letter-spacing: 20px;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.tenet-link {
+    color: white;
+}
+
+.choose-one:hover .tenet-button,
+.choose-two:hover .tenet-button,
+.choose-three:hover .tenet-button,
+.choose-four:hover .tenet-button,
+.choose-five:hover .tenet-button,
+.choose-six:hover .tenet-button,
+.choose-seven:hover .tenet-button,
+.choose-eight:hover .tenet-button {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.choose-two {
+    background-color: rgb(252, 160, 0);
+    flex-grow: 1;
+}
+
+.choose-three {
+    background-color: rgb(221, 255, 0);
+    flex-grow: 1;
+}
+
+.choose-four {
+    background-color: rgb(19, 255, 7);
+    flex-grow: 1;
+}
+
+.choose-five {
+    background-color: rgb(0, 255, 136);
+    flex-grow: 1;
+}
+
+.choose-six {
+    background-color: rgb(0, 208, 255);
+    flex-grow: 1;
+}
+
+.choose-seven {
+    background-color: rgb(0, 72, 255);
+    flex-grow: 1;
+}
+
+.choose-eight {
+    background-color: rgb(128, 0, 255);
+    flex-grow: 1;
+}
+
+.tenet-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-image: url('/assets/scroll-paper-template-printable-design-pattern.jpg');
+    background-size: 100vw 100vh;
+    padding: 10rem;
+}
+
+.brushstroke {
+    font-size: 150px;
+    font-family: 'glades';
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0em 0.1em 0em rgba(0, 0, 0, 1.0);
+}
+
+.parallax {
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parallax0 {
+    background-image: url('https://shanghai.ist/wp-content/uploads/2018/10/great-wave-off-kanagawa-hakusai.jpg');
+    background-size: cover;
+    background-position-x: left;
+}
+
+#parallax1 {
+    background-image: url('https://vignette.wikia.nocookie.net/saw/images/1/18/Miyamoto_Musashi_killing_a_giant_nue.jpg/revision/latest/scale-to-width-down/1000?cb=20060525113454');
+    height: 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#parallax1x {
+    background-image: url('https://vignette.wikia.nocookie.net/saw/images/1/18/Miyamoto_Musashi_killing_a_giant_nue.jpg/revision/latest/scale-to-width-down/1000?cb=20060525113454');
+    height: 100%;
+    background-attachment: fixed;
+    background-position-y: bottom;
+}
+
+#parallax2 {
+    background-image: url('https://www.adachi-hanga.com/ukiyo-e/items/kuniyoshi023/kuniyoshi023_main.jpg');
+    background-position-x: 13%;
+}
+
+#parallax3 {
+    background-image:url('https://i.pinimg.com/originals/6d/d1/2d/6dd12d016a93c999f732167ae3b98339.jpg');
+    background-position-x: 75%;
+}
+
+#parallax4 {
+    background-image: url('https://files.tofugu.com/articles/japan/2015-05-27-ukiyo-e-cats-in-japanese-art/nekomata-ukiyoe-by-kunisada.jpg');
+    background-position-x: 10%;
+}
+
+#parallax5 {
+    background-image: url('https://sublime-images.com/wp-content/uploads/2016/10/Samurai1Kunisada.jpg');
+    background-position-y: 10%;
+}
+
+#parallax6 {
+    background-image: url('https://static1.squarespace.com/static/5172bbf1e4b05f51bd7172fe/t/593c88da1e5b6ca18cad28da/1497139436770/dogsamurai');
+    background-position-x: 57%;
+}
+
+#parallax7 {
+    background-image: url('https://i2.wp.com/gethiroshima.com/wp-content/uploads/2017/03/Princess-Takiyasha-and-the-Huge-Skeleton-by-Utagawa-Kuniyoshi.png?fit=1193%2C582&ssl=1');
+    background-position-x: 43%;
+}
+
+#parallax8 {
+    background-image: url('https://i.etsystatic.com/5599270/r/il/219dd3/442526058/il_570xN.442526058_qtqg.jpg');
+    background-position-y: center;
+}
+
+#parallax9 {
+    background-image: url('https://vignette.wikia.nocookie.net/saw/images/1/18/Miyamoto_Musashi_killing_a_giant_nue.jpg/revision/latest/scale-to-width-down/1000?cb=20060525113454');
+    background-position-y: 80%;
+}
+
+#parallax10 {
+    background-image: url('http://nebula.wsimg.com/f92dc721d3ca18023c7a4132cbf43b6e?AccessKeyId=B37CB88B8FB22046F6F0&disposition=0&alloworigin=1');
+    height: 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#parallax11 {
+    background-image: url('https://data.ukiyo-e.org/met/images/DP141353.jpg');
+    /* height: 100%; */
+    background-attachment: fixed;
+    background-position-y: bottom;
+    background-position-x: 30%;
+    background-size: cover;
+}
+
+#parallax12 {
+    background-image: url('https://data.ukiyo-e.org/met/images/DP122119.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position-y: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.users-body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(58, 240, 161);
+    text-align: center;
+}
+
+.media-body {
+    /* width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(104, 147, 255);
+    text-align: center; */
+}
+
+.media-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-size: 100vw 100vh;
+    padding: 10rem;
+}
+
+.credits-body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(255, 128, 204);
+    text-align: center;
+}
+
+#credits {
+    background-image: url('/assets/mt_fuji.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+}
+
+.credits-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-size: 100vw 100vh;
+    padding: 10rem;
+}
+
+.credit-title {
+    font-family: 'glades';
+    font-size: 50px;
+    color: white;
+    text-shadow: black 0px 5px;
+}
+
+#main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    width: 100vw;
+    position: fixed;
+    background-color: black;
+    color: white;
+    z-index: 100;
+}
+
+#main-nav div .nav-link{
+    margin: 0 1em;
+    font-family: 'glades';
+    transition: 1s;
+}
+
+#main-nav div .nav-link:hover{
+    margin: 0 1em;
+    font-family: 'glades';
+    color: rgb(255, 162, 0);
+}
+
+.tenet-title {
+    font-family: 'glades';
+    font-size: 60px;
+}
+
+.choices {
+    display: flex;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.jump {
+    color: black;
+    font-family: 'glades';
+    font-size: 20px;
+    padding-top: 20px;
+    margin-top: 50px;
+    margin: 0 30px;
+}
+
+.jump-back {
+    color: black;
+    font-family: 'glades';
+    font-size: 30px;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+.hero-image-container {
+    /* background-color: cyan; */
+    flex-grow: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-heading {
+    font-family: 'bamboo';
+    font-size: 30px;
+}
+
+.body-heading-link {
+    font-family: 'bamboo';
+    font-size: 30px;
+    /* margin-top: 200px; */
+    /* background-color: yellow; */
+}
+
+.body-heading-scroll {
+    font-family: 'bamboo';
+    font-size: 140%;
+}
+
+.list-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.body-para {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin-bottom: 1.5em;
+}
+
+.body-list {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin: 0.5em 0;
+    list-style: none;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-image: url('./scroll-paper-template-printable-design-pattern.jpg');
+    background-size: 100vw 100vh;
+    position: relative;
+}
+
+.b-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-image: url('./scroll-paper-template-printable-design-pattern.jpg');
+    background-size: 100vw 100vh;
+    position: relative;
+}
+
+.students-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: url('https://data.ukiyo-e.org/met/images/DP141353.jpg');
+    background-size: fixed;
+    background-position-x: 10%;
+    background-position-y: 90%;
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-image: url('./scroll-paper-template-printable-design-pattern.jpg');
+    background-size: 100vw 100vh;
+    position: relative;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-body-heading {
+    font-family: 'bamboo';
+    font-size: 30px;
+    margin: 1rem;
+}
+
+.login-input {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+    width: 100%;
+    margin-left: 1em;
+}
+
+.login-scroll-details {
+    display: flex;
+    flex-direction: row;
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+    width: 70%;
+    background-position-x: 10%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+    align-items: center;
+}
+
+.login-main-scroll {
+    width: 550px;
+    height: 120px;
+    /* background-color: orange; */
+    color: black;
+    display: flex;
+    padding: 1em 0em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://us.123rf.com/450wm/sahua/sahua1210/sahua121000002/15886347-traditional-japanese-seigaiha-waves-seamless-pattern.jpg?ver=6');
+    background-position: center;
+    position: relative;
+    /* background-transform: rotate(90deg) */
+    border-radius: 30px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    margin: 0.5em;
+    /* float: left; */
+    /* display: inline-block; */
+}
+
+.login-student-box {
+    width: 250px;
+    /* width: 15em; */
+    background-color: rgb(255, 255, 255);
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+    border: 10px solid black;
+    margin: 1.5em auto;
+    display: inline-block;
+    /* float: left; */
+}
+
+.login-button {
+    font-family: 'bamboo';
+    font-size: 200%;
+    color: rgb(237, 148, 39);
+    text-shadow: 0em 0.1em black;
+    margin: 0.5em;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+}
+
+.sign-up-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    /* background-color: yellow; */
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* margin: 0 20px; */
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+    padding: 2em;
+}
+
+.signup-input {
+    padding: 0.5em;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg'); */
+    width: 100%;
+    border: none;
+    margin-top: 0.5em;
+    /* margin-left: 1em; */
+}
+
+.signup-label {
+    margin: 1em 0;
+}
+
+.signup-label-author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.sign-up-scroll {
+    width: 40%;
+    background-image: url('https://us.123rf.com/450wm/sahua/sahua1210/sahua121000002/15886347-traditional-japanese-seigaiha-waves-seamless-pattern.jpg?ver=6');
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin: 0 auto;
+}
+
+.student-image-signup {
+    /* padding: 0.5em; */
+    background-image: url('https://image.flaticon.com/icons/svg/28/28293.svg');
+    height: 100px;
+    width: 100px;
+    background-size:100% 100%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.signup-button {
+    font-family: 'bamboo';
+    font-size: 200%;
+    color: rgb(237, 148, 39);
+    text-shadow: 0em 0.1em black;
+    margin: 0.5em;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+    margin-top: 1em;
+}
+
+.signup-intro {
+    width: 50%;
+    /* background-color: darkgoldenrod; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
+    /* height: 100%; */
+}
+
+.content-input {
+    font-size: 18px;
+    padding: 0.5em;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg'); */
+    width: 100%;
+    height: 180px;
+    border: none;
+    margin-top: 0.5em;
+
+    /* margin-left: 1em; */
+}
+
+.body-heading2 {
+    font-family: 'bamboo';
+    font-size: 30px;
+    margin-top: 3em;
+}
+
+#scrolling-students {
+    /* background-color: lightblue; */
+    height: 70%;
+    width: 85%;
+    overflow-y: scroll;
+}
+
+.student-list {
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    /* background-color: yellow; */
+}
+
+.student-box {
+    width: 250px;
+    /* width: 15em; */
+    background-color: rgb(255, 255, 255);
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+    border: 10px solid black;
+    margin: 2em;
+    display: inline-block;
+    /* float: left; */
+}
+
+.student-container {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    padding: 1em;
+}
+
+.student-image {
+    padding: 0.5em;
+    background-image: url('https://image.flaticon.com/icons/svg/28/28293.svg');
+    height: 120px;
+    width: 120px;
+    background-size:100% 100%;
+    margin: 0 auto;
+}
+
+.student-username {
+    font-family: 'bamboo';
+    font-size: 200%;
+    color: rgb(237, 148, 39);
+    text-shadow: 0em 0.1em black;
+}
+
+.student-scrolls {
+    font-family: 'bamboo';
+    font-size: 100%;
+    color: rgb(0, 0, 0);
+}
+
+#first-sam {
+    background-image: url('https://purepng.com/public/uploads/large/purepng.com-samuraisamuraimilitarymedievalfighterwarriorarmorjapaneseclipart-1421526964667h2eoi.png');
+    height: 640px;
+    width: 330px;
+    background-size:100% 100%;
+    z-index: 3;
+}
+
+#second-sam {
+    background-image: url('http://pngimg.com/uploads/samurai/samurai_PNG28.png');
+    height: 640px;
+    width: 330px;
+    background-size:100% 100%;
+    z-index: 3;
+}
+
+#third-sam {
+    background-image: url('http://www.freepngclipart.com/download/tattoo/47119-warrior-bushido-samurai-ink-japan-drawing.png');
+    height: 557px;
+    width: 564px;
+    background-size:100% 100%;
+    z-index: 3;
+}
+
+#fourth-sam {
+    background-image: url('https://i.pinimg.com/originals/28/da/7f/28da7f4f11e463024a09fc8c80748657.jpg');
+    height: 640px;
+    width: 414px;
+    background-size:100% 100%;
+    z-index: 3;
+}
+
+.hero-image {
+    background-image: url('/assets/ronin_small.png');
+    height: 640px;
+    width: 450px;
+    background-size:100% 100%;
+    z-index: 3;
+}
+
+.zen-circle {
+    width: 25%;
+    position: absolute;
+    -webkit-animation: spin 90s infinite linear;
+} 
+
+@-webkit-keyframes spin {
+    0%   {-webkit-transform: rotate(0deg)}
+    100% {-webkit-transform: rotate(360deg)}
+}
+
+#moviePage {
+    background-image: url('http://www.gsfdcy.com/data/img1/45/1644859-japanese-wallpaper.jpg');
+    background-size: 100vw 100vh;
+}
+
+#tvPage {
+    background-image: url('https://genevaanderson.files.wordpress.com/2011/01/aam-bgc-cat-12-left.jpg');
+    background-size: 100vw 100vh;
+}
+
+#booksPage {
+    background-image: url('https://mfas3.s3.amazonaws.com/objects/SC235565.jpg');
+    background-size: 100vw 100vh;
+}
+
+.media-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-height {
+    height: 300px;
+}
+
+.poster-height {
+    max-height: 100%;
+}
+
+.book-height {
+    height: 300px;
+}
+
+.book-height:hover {
+    opacity: 0.5
+}
+
+.poster-height:hover {
+    opacity: 0.5;
+}
+
+.last-pages {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.scroll-container {
+    /* background-color: rgb(255, 255, 255); */
+    /* background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg'); */
+    /* border: 10px solid black; */
+    margin: 0.5em;
+    display: inline-block;
+}
+
+.main-scroll {
+    width: 550px;
+    /* background-color: orange; */
+    color: black;
+    display: flex;
+    padding: 1em 0em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://us.123rf.com/450wm/sahua/sahua1210/sahua121000002/15886347-traditional-japanese-seigaiha-waves-seamless-pattern.jpg?ver=6');
+    background-position: center;
+    position: relative;
+    /* background-transform: rotate(90deg) */
+    border-radius: 30px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    margin: 0.5em;
+    /* float: left; */
+    /* display: inline-block; */
+}
+
+.scroll-start {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-details {
+    display: flex;
+    flex-direction: column;
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+    width: 70%;
+    background-position-x: 10%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-title {
+    font-family: 'glades';
+    font-size: 130%;
+    margin-bottom: 0;
+}
+
+.scroll-title-big {
+    font-family: 'glades';
+    font-size: 220%;
+    margin-bottom: 0;
+}
+
+.scroll-subtitle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.scroll-user {
+    font-family: 'bamboo';
+}
+
+.scroll-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: lawngreen; */
+    margin-top: 5em;
+}
+
+.banner2 {
+    background-color: rgb(0, 0, 0);
+    width: 15px;
+    height: 120px;
+    position: absolute;
+    right: 6%;
+}
+
+.banner1 {
+    background-color: rgb(0, 0, 0);
+    width: 15px;
+    height: 120px;
+    position: absolute;
+    left: 6%;
+}
+
+#scrolling-scrolls {
+    /* background-color: lightblue; */
+    height: 70%;
+    width: 90%;
+    overflow-y: scroll;
+}
+
+.scrolls-list {
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    /* background-color: yellow; */
+}
+
+.students-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /* background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg'); */
+    background-image: url('https://d32dm0rphc51dk.cloudfront.net/gIuZp8iFzj64mChPqCsNFg/large.jpg');
+    background-size: cover;
+    /* background-position-x: 10%; */
+    background-position-y: top;
+}
+
+.scroll-heading {
+    font-family: 'glades';
+    font-size: 60px;
+    color: black;
+    margin-top: 140px;
+}
+
+.student-heading {
+    font-family: 'glades';
+    font-size: 60px;
+    margin-top: 160px;
+    color: black;
+}
+
+.scroll-image-icon {
+    /* padding: 0.5em; */
+    background-image: url('https://image.spreadshirtmedia.com/image-server/v1/mp/designs/1018582030,width=178,height=178,version=-96287962/samurai-icon.png');
+    height: 100px;
+    width: 100px;
+    background-size:100% 100%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+
+.my-profile-box {
+    width: 50%;
+    height: 75%;
+    /* width: 15em; */
+    background-color: rgb(255, 255, 255);
+    background-image: url('http://designers-tips.com/wp-content/uploads/2012/05/wasi8.jpg');
+    border: 10px solid black;
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-profile-container {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    padding: 1em;
+    /* margin: auto 0; */
+    /* background-color: aliceblue; */
+}
+
+.my-profile-image {
+    padding: 0.5em;
+    background-image: url('https://image.flaticon.com/icons/svg/28/28293.svg');
+    height: 120px;
+    width: 120px;
+    background-size:100% 100%;
+    margin: 0 auto;
+}
+
+.my-profile-username {
+    font-family: 'bamboo';
+    font-size: 200%;
+    color: rgb(237, 148, 39);
+    text-shadow: 0em 0.1em black;
+}
+
+.my-profile-div {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.my-profile-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-image: url('./scroll-paper-template-printable-design-pattern.jpg');
+    background-size: 100vw 100vh;
+    position: relative;
+}
+
+.my-scrolls {
+    width: 50%;
+    height: 75%;
+    /* background-color: brown; */
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#my-scrolling-scrolls {
+    /* background-color: lightblue; */
+    height: 100%;
+    width: 90%;
+    overflow-y: scroll;
+    margin: 0 auto;
+}
+
+.my-jump {
+    color: black;
+    font-family: 'glades';
+    font-size: 20px;
+    margin-top: 3em;
+    /* background-color: yellow; */
+}
+
+.my-scrolls-heading {
+    color: black;
+    font-family: 'glades';
+    font-size: 50px;
+    margin: 0em;
+    margin-bottom: 0.5em;
+}
+
+.my-profile-para {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin: 2em;
+}
+
+.my-profile-scrolls {
+    font-family: 'bamboo';
+    font-size: 150%;
+    color: rgb(0, 0, 0);
+    margin: 2em;
+}
+
+.scroll-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    background-image: url('https://d32dm0rphc51dk.cloudfront.net/gIuZp8iFzj64mChPqCsNFg/large.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.carousel-height {
+    height: 300px;
+}
+
+.poster-height {
+    max-height: 100%;
+}
+
+.poster-height:hover {
+    opacity: 0.5;
+}
+
+.media-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.last-pages {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.flickity-page-dots {
+    /* position: absolute; */
+    width: 100%;
+    bottom: -25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+}
+
+.flickity-slider {
+
+}
+
+#movie-list {
+    margin: 0 auto;
+    position: relative;
+}
+
+#tv-list {
+    margin: 0 auto;
+    position: relative;
+}
+
+#book-list {
+    margin: 0 auto;
+    position: relative;
+}
+
+.flickity-viewport {
+    overflow: hidden;
+    position: relative;
+    /* height: 100%; */
+    background-color: rgb(0, 0, 0);
+}
+
+.flickity-button {
+    /* position: absolute; */
+    position: relative;
+    /* left: 0; */
+    background: hsla(0, 0%, 100%, 0.75);
+    border: none;
+    color: #333;
+}
+
+.flickity-prev-next-button {
+    /* top: 50%; */
+    width: 44px;
+    height: 44px;
+    /* border-radius: 50%; */
+    /* transform: translateY(-50%); */
+    margin: 0;
+    /* z-index: 100; */
+}
+
+.flickity-prev-next-button:hover {
+    background: hsl(0, 0%, 100%);
+}
+
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: rgba(62, 62, 62, 0.0);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'glades';
+    transition: 2s;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: solid rgba(62, 62, 62, 0.3) 1px;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(38, 38, 38);
+}
+
+.show {display: block;}
+
+#myDropdown a {
+    font-family: 'bamboo';
+}
+
+#myDropdown a:hover {
+    color: rgb(255, 162, 0);
+}
