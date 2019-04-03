@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     post.user_id = current_user.id
     post.save
 
-    redirect_to '/posts'
+    redirect_to "/posts/#scroll-index"
   end
 
   def show
